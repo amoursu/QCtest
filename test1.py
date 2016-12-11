@@ -28,5 +28,15 @@ class Rectangle:
 
 r = Rectangle(3, 4)
 
-    # TypeError: int is not callable
+# TypeError: int is not callable
 print(r.area())
+
+import random
+
+class RandomNumbers:
+    def __init__(self):
+        for n in range(10):
+            # TypeError: __init__ is a generator
+            yield random.random()
+
+random_number_list = RandomNumbers()
