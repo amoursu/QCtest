@@ -40,3 +40,12 @@ class RandomNumbers:
             yield random.random()
 
 random_number_list = RandomNumbers()
+
+
+def foo(bar, baz, bar = "uups"):
+    # parameter one or three? Python cannot resolve.
+    print "{0}, {1}".format(bar, baz)
+    #  ...
+
+# print out "a, b" or "ups, b"? Python cannot resolve.
+foo("a", "b")
